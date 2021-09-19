@@ -1,0 +1,211 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* variables */
+:root {
+	--blue: hsl(246, 80%, 60%);
+	--dark-blue: hsl(235, 46%, 20%);
+	--very-dark-blue: hsl(226, 43%, 10%);
+	--pale-blue: hsl(236, 100%, 87%);
+	--desaturated-blue: hsl(235, 45%, 61%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 4% 3%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+	flex-direction: column;
+	background-color: #ddd;
+	color: #ddd;
+}
+
+h1.title {
+	margin-bottom: 3%;
+	color: #e50914;
+	font-weight: 400;
+	font-size: 2.2rem;
+}
+
+.app {
+	/* border: 1px solid black; */
+	width: 100%;
+	min-height: max-content;
+	/* padding: 1rem; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.category {
+	width: 100%;
+	/* height: max-content; */
+	/* padding: 1rem; */
+	/* border: 1px solid orange; */
+}
+
+.category--latest {
+	margin: 1.5rem 0;
+}
+
+/* movie cards container */
+.movie-cards-container__header {
+	/* border: 1px solid red; */
+	color: #e50914;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+
+.movie-cards-container__header h3,
+.movie-cards-container__header h4 {
+	font-weight: 400;
+	font-size: 1.25rem;
+}
+
+.movie-cards-container__body {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* card */
+
+.card {
+	width: 30%;
+	min-height: 60vh;
+	max-height: 80vh;
+	/* border: 1px solid black; */
+	background-color: var(--dark-blue);
+	border-radius: 0.5rem;
+}
+
+.card__image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 50%;
+	border-radius: 0.5rem;
+}
+
+.card__header {
+	height: 10%;
+	text-align: left;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+
+.card__header h4 {
+	font-weight: 400;
+	color: #ddd;
+}
+
+.card__details {
+	padding: 1rem;
+	height: 50%;
+	padding-bottom: 2rem;
+	color: rgb(163, 162, 162);
+}
+
+.card__body {
+	height: 90%;
+	overflow-y: scroll;
+	/* border: 1px orange; */
+}
+
+.card__body__review {
+	margin: 1rem 0;
+}
+
+/* icons */
+
+.far {
+	font-size: 1.2rem;
+}
+
+.far:hover {
+	color: white;
+	cursor: pointer;
+}
+
+/* card body review */
+
+.card__body__review__header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 0.4rem;
+	align-items: space-between;
+}
+
+.card__body__review__header h5,
+.card__body__review__header p {
+	color: rgb(247, 188, 188);
+}
+
+.card__body__review__header h5 {
+	font-size: 1.1rem;
+	margin-bottom: 0.1rem;
+}
+
+/* setting images according to the movie */
+
+.card__image--manchester-by-the-sea {
+	background-image: url("https://api.time.com/wp-content/uploads/2016/11/manchester-by-the-sea.jpg");
+	background-position: center top;
+}
+
+.card__image--pain-and-gain {
+	background-image: url("https://c4.wallpaperflare.com/wallpaper/134/155/699/pain-and-gain-2013-wallpaper-preview.jpg");
+	background-position: center top;
+}
+
+.card__image--gone-girl {
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe-xK7tmXOlSJ535NQPk3k9KUATljm3tEUDQ&usqp=CAU");
+	background-position: center top;
+}
+
+.card__image--monster-hunter {
+	background-image: url("https://www.indiewire.com/wp-content/uploads/2020/12/QJZH6eZn8QXgPUamTqRVFC-1200-80.jpg");
+	background-position: center top;
+}
+
+.card__image--godzilla-vs-kong {
+	background-image: url("https://img.cinemablend.com/quill/d/f/c/b/2/8/dfcb289bf1c13b7ce1c44860cb09e40c05023848.jpg");
+	background-position: center top;
+}
+
+.card__image--dont-breathe-2 {
+	background-image: url("https://www.screenrealm.com/wp-content/uploads/2020/10/stephen-lang-dont-breathe-movie.jpg");
+	background-position: center top;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1000px) {
+	.movie-cards-container__body {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card {
+		width: 80%;
+		margin-bottom: 3.2rem;
+		height: 80vh;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		width: 95%;
+	}
+}
